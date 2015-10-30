@@ -2,6 +2,8 @@
 
 This is a Tip Calculator application for iOS submitted as the [pre-assignment](https://gist.github.com/timothy1ee/7747214) requirement for CodePath.
 
+The project was built with Xcode 7.1 (7B91b) - Language: Swift
+
 Time spent: 7 hours
 
 Completed:
@@ -17,6 +19,4 @@ Completed:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
 
-This project was built with Xcode 7.1 (7B91b) - Language: Swift
