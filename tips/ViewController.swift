@@ -39,16 +39,20 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        tipControl.selectedSegmentIndex = DataModel.getSelectedSegmentIndexByValue(DataModel.loadDoubleValueBy(DataModel.TIP_PERCENTAGE_KEY))
+        onEditingChange(self.billField)
+    }
+    
     override func viewDidAppear(animated: Bool) {
 
         billField.becomeFirstResponder()
+        
     }
 
     @IBAction func onEditingChange(sender: AnyObject) {
         
         let tipPercentage = DataModel.tipPercentages[tipControl.selectedSegmentIndex]
-
-//        let billAmount = (billField.text! as NSString).doubleValue
         
         let billAmount = Currency.localeCurrencyToNumber(billField.text!)
         billField.text = "\(Currency.symbol()) \(Currency.asLocaleCurrency(billAmount))"
